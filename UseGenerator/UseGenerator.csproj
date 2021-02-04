@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>preview</LangVersion>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Cars.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Cars.csv">
+      <CsvLoadType>OnDemand</CsvLoadType>
+      <CacheObjects>true</CacheObjects>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup>
+      <PackageReference Include="JsonSrcGen" Version="0.2.0-alpha">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+  <Import Project="..\Generator\CsvGenerator.props" />
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Title>Generator</Title>
+        <TargetFramework>netstandard2.0</TargetFramework>
+      <LangVersion>9</LangVersion>
+    </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Cars.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Cars.csv">
+      <CsvLoadType>OnDemand</CsvLoadType>
+      <CacheObjects>true</CacheObjects>
+    </AdditionalFiles>
+  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="CsvTextFieldParser" Version="1.2.2-preview" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.8.0-5.final" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.1" PrivateAssets="all" />
+    </ItemGroup>
+</Project>
