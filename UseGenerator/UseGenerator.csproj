@@ -5,16 +5,6 @@
         <LangVersion>preview</LangVersion>
         <OutputType>Exe</OutputType>
     </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Cars.csv" />
-  </ItemGroup>
-  <ItemGroup>
-    <AdditionalFiles Include="Cars.csv">
-      <CsvLoadType>OnDemand</CsvLoadType>
-      <CacheObjects>true</CacheObjects>
-    </AdditionalFiles>
-  </ItemGroup>
   <ItemGroup>
       <PackageReference Include="JsonSrcGen" Version="0.2.0-alpha">
         <PrivateAssets>all</PrivateAssets>
@@ -25,6 +15,4 @@
     <ItemGroup>
       <ProjectReference Include="..\Generator\Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
     </ItemGroup>
-
-  <Import Project="..\Generator\CsvGenerator.props" />
 </Project>
