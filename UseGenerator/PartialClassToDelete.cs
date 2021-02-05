@@ -1,6 +1,6 @@
 ﻿using ValueObjectGenerator;
 
-namespace UseGenerator
+namespace MetaJson
 {
     [StringValueObject]
     public partial class PartialClassToDelete

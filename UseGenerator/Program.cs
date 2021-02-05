@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Generic;
 using JsonSrcGen;
+using MetaJson;
 using ValueObjectGenerator;
 
-namespace UseGenerator
+namespace MetaJson
 {
     [Json]
     public class JsonArrayClass
@@ -16,7 +18,7 @@ namespace UseGenerator
     }
 
     //[IntValueObject]
-    public class ProductId
+    public partial class ProductId
     {
     }
 
@@ -24,24 +26,31 @@ namespace UseGenerator
     {
     }
 
+    [Serialize]
+    public partial class Book
+    {
+        [Serialize]
+        public string Name { get; set; }
+    }
+
     public static class Program
     {
         public static void UseJsonArray()
         {
-            var _convert = new JsonConverter();
+            var _convertProgram = new JsonConverter();
 
-            var jsonClass = new JsonArrayClass
+            var jsonClassProgram = new JsonArrayClass
             {
                 BooleanArray = new[] {true, false}
             };
 
-            var json = _convert.ToJson(jsonClass);
+            var json = _convertProgram.ToJson(jsonClassProgram);
         }
 
         public static void SampleStringValueObject()
         {
-            var userName = new UserName("Ryota");
-            Console.WriteLine($"userName.Value: {userName.Value}");
+            var userNameProgram = new UserName("Ryota");
+            Console.WriteLine($": {userNameProgram.Value}");
 
             var partialClassToDelete = new PartialClassToDelete("Test");
         }
@@ -53,6 +62,7 @@ namespace UseGenerator
 
         public static void Main(string[] args)
         {
+            var someNamedName = new Book().get_name;
         }
     }
 }
