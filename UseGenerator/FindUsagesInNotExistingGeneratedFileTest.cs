@@ -6,4 +6,12 @@ namespace UseGenerator4
     public partial class FindUsagesInNotExistingGeneratedFileTest
     {
     }
+
+    class Use1
+    {
+        private void Test()
+        {
+            new FindUsagesInNotExistingGeneratedFileTest("");
+        }
+    }
 }

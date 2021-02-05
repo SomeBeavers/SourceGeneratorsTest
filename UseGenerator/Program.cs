@@ -17,15 +17,6 @@ namespace MetaJson
     {
     }
 
-    //[IntValueObject]
-    public partial class ProductId
-    {
-    }
-
-    public partial class PartialClassToDelete
-    {
-    }
-
     [Serialize]
     public partial class Book
     {
@@ -51,13 +42,6 @@ namespace MetaJson
         {
             var userNameProgram = new UserName("Ryota");
             Console.WriteLine($": {userNameProgram.Value}");
-
-            var partialClassToDelete = new PartialClassToDelete("Test");
-        }
-
-        public static void SampleIntValueObject()
-        {
-            /*use ProductId*/
         }
 
         public static void Main(string[] args)
