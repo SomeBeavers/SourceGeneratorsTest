@@ -11,7 +11,7 @@ namespace GeneratedDemo
         [AutoNotify] private string _text = "private field text";
     }
 
-    public static class UseAutoNotifyGenerator
+    public static class TypingTest
     {
         public static void Run()
         {

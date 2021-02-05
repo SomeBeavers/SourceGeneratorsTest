@@ -8,7 +8,7 @@ namespace UseGenerator10
     {
     }
 
-    public class RenameGeneratedUsage1
+    public class RenameGeneratedUsageWithNotExistingGeneratedFileTest
     {
         public static void SampleStringValueObject()
         {

@@ -8,7 +8,7 @@
     {
         private void Test()
         {
-            var partialClassToDelete = new PartialClassToDelete("Test");
+            var partialClassToDelete = new PartialClassToDelete("comment");
         }
     }
 }

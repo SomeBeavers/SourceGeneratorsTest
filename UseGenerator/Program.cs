@@ -22,6 +22,8 @@ namespace MetaJson
     {
         [Serialize]
         public string Name { get; set; }
+
+        public void Test() { }
     }
 
     public static class Program

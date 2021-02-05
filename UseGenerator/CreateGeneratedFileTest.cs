@@ -1,4 +1,4 @@
-﻿namespace UseGenerator
+﻿namespace UseGenerator03
 {
 
     //[IntValueObject]
